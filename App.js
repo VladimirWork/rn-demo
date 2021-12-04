@@ -19,13 +19,13 @@ import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
 const App = () => {
   const [selected, setSelected] = React.useState(1);
+
   return (
     <NativeBaseProvider>
       <Box flex={1} bg="white" safeAreaTop>
         <Center flex={1}></Center>
         <HStack bg="indigo.600" alignItems="center" safeAreaBottom shadow={6}>
           <Pressable
-            // cursor="pointer"
             opacity={selected === 0 ? 1 : 0.5}
             py="3"
             flex={1}
@@ -41,13 +41,12 @@ const App = () => {
                 color="white"
                 size="sm"
               />
-              <Text color="white" fontSize="12">
+              <Text color="white" fontSize="14">
                 Home
               </Text>
             </Center>
           </Pressable>
           <Pressable
-            // cursor="pointer"
             opacity={selected === 1 ? 1 : 0.5}
             py="2"
             flex={1}
@@ -60,13 +59,12 @@ const App = () => {
                 color="white"
                 size="sm"
               />
-              <Text color="white" fontSize="12">
+              <Text color="white" fontSize="14">
                 Search
               </Text>
             </Center>
           </Pressable>
           <Pressable
-            // cursor="pointer"
             opacity={selected === 2 ? 1 : 0.6}
             py="2"
             flex={1}
@@ -83,13 +81,12 @@ const App = () => {
                 color="white"
                 size="sm"
               />
-              <Text color="white" font="12">
+              <Text color="white" fontSize="14">
                 Cart
               </Text>
             </Center>
           </Pressable>
           <Pressable
-            // cursor="pointer"
             opacity={selected === 3 ? 1 : 0.5}
             py="2"
             flex={1}
@@ -106,7 +103,7 @@ const App = () => {
                 color="white"
                 size="sm"
               />
-              <Text color="white" fontSize="12">
+              <Text color="white" fontSize="14">
                 Account
               </Text>
             </Center>
