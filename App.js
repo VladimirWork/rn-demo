@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, SafeAreaView, FlatList, StyleSheet, StatusBar } from 'react-native';
+import { Text, View, Image, SafeAreaView, FlatList, StyleSheet, StatusBar, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -44,7 +44,7 @@ const Home = () => {
 const Notifications = () => {
   return (
     <View style={styles.default}>
-      <Text>Notifications</Text>
+      <ActivityIndicator size="large" color="#e91e63" />
     </View>
   );
 }
@@ -52,7 +52,12 @@ const Notifications = () => {
 const Profile = () => {
   return (
     <View style={styles.default}>
-      <Text>Profile</Text>
+      <Image
+        style={styles.logo}
+        source={{
+          uri: 'https://reactnative.dev/img/tiny_logo.png',
+        }}
+      />
     </View>
   );
 }
@@ -75,6 +80,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
+  },
+  logo: {
+    width: 64,
+    height: 64,
   },
 });
 
